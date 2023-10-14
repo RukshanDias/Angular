@@ -4,6 +4,7 @@
 
 1. [Angular Framework](https://github.com/RukshanDias/Angular#1-angular-framework) </br>
 2. [Components & Modules](https://github.com/RukshanDias/Angular#2-components--modules) </br>
+3. [Data Binding](https://github.com/RukshanDias/Angular#3-data-binding) </br>
 
 ---
 
@@ -74,3 +75,56 @@
 -   When Angular app starts, the first module/component to launch is the bootstrapped one. (in short - 1st to launch).
 
 ---
+
+## 3. Data Binding
+
+#### 3.1 What's data binding
+
+-   A way to communicate between TS code and html view.
+-   ![](assets/data%20binding%20techniques.png)
+
+#### 3.2 What's string interpolation
+
+-   One-way data-binding technique, transfer data from TS to HTML
+    -   Only works with strings.
+    -   represented inside {{ }}
+
+```
+let title="hello"; //ts
+
+<h1> {{ title }} </h1> //html
+```
+
+#### 3.3 What's property binding
+
+-   superset of interpolation - support all data types
+
+```
+let isDisabled=true; //ts
+
+<input type='text' [disabled]='isDisabled'/> //html
+```
+
+#### 3.4 What's Event Binding
+
+-   Used to handel events raised by user actions. i.e : btn click.
+-   transfer from html to ts.
+
+```
+<button (click)="clickBtn()"> Click Me </button> //html
+
+public clickBtn(){ console.log("clicked")} //ts
+```
+
+#### 3.5 What's 2 way data binding?
+
+-   Support html to ts and ts to html same time.
+
+```
+<input [(ngModel)]="name" type="text"/> //html
+<h1> {{ name }} </h1>   // real time output of change
+
+let name="Mike"; //ts
+
+```
+
