@@ -128,3 +128,71 @@ let name="Mike"; //ts
 
 ```
 
+---
+
+## 4. Directives
+
+#### 4.1 What're directives? & there types?
+
+-   Directives are, classes that add additional behavior to elements.
+-   3 types of main directives. Can create customs also.
+    1. **Component**: directives with its own templates. shows 1st view.
+    2. **Attribute**: change appearance & behavior of element.
+        - [ngStyle]
+        - [ngClass]
+    3. **Structural**: change the appearance of DOM. by adding & removing.
+        - \*ngIf
+        - \*ngFor
+        - \*ngSwitch
+-   ![Directive types](assets/directive%20types.png)
+
+#### 4.2 What's \*ngIf?
+
+-   follows the if condition.
+
+```
+<h1 *ngIf="dataVisible"> Hello </h1>
+
+let dataVisible = false;    //ts
+```
+
+#### 4.3 What's \*ngFor?
+
+-   follows the For loop principle.
+
+```
+<li *ngFor="let student of studentList">
+    {{ student }}
+</li>
+
+let studentList = ['Jane', 'May', 'Peter']  //ts
+```
+
+#### 4.4 What's \*ngSwitch?
+
+-   follows the Switch case principle.
+
+```
+<ul [ngSwitch]="studentList.length">
+    <li *ngSwitchCase=0> 0 students </li>
+    <li *ngSwitchCase=1> 1 students </li>
+    <li *ngSwitchCase=2> 2 students </li>
+    <li *ngSwitchDefault> More students </li>
+</ul>
+
+let studentList = ['Jane', 'May']  //ts
+```
+
+#### What's [ngStyle]
+
+-   Update Style for html element.
+
+```
+<div [ngStyle]="{'color': myColorName}"></div>
+
+let myColorName = 'red';
+```
+
+#### What's [ngClass]
+
+-   Adds & removes CSS classes from an element.
