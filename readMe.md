@@ -184,7 +184,7 @@ let studentList = ['Jane', 'May', 'Peter']  //ts
 let studentList = ['Jane', 'May']  //ts
 ```
 
-#### What's [ngStyle]
+#### 4.5 What's [ngStyle]
 
 -   Update Style for html element.
 
@@ -194,6 +194,49 @@ let studentList = ['Jane', 'May']  //ts
 let myColorName = 'red';
 ```
 
-#### What's [ngClass]
+#### 4.6 What's [ngClass]
 
 -   Adds & removes CSS classes from an element.
+
+---
+
+## 5. Decorator & Pipes
+
+#### 5.1 What's Decorator?
+
+-   decorator store metadata about a class, method or property.
+-   All decorators are represented with @ symbol.
+-   ![](assets/metadata.png)
+
+#### 5.2 What're the types of decorators?
+
+![decorators types](assets/types-of-decorators.png)
+
+#### 5.3 What're Pipes?
+
+-   A function that accept an input & return a transformed value.
+-   ![types of pipes](assets/Pipes-types.png)
+
+```
+<h3> {{ title }} </h3>                  // Hello World
+<h3> {{ title | lowercase }} </h3>      // hello world
+<h3> {{ title | uppercase }} </h3>      // HELLO WORLD
+
+```
+
+-   **Parameterized pipe** - pipes with parameters passed.
+
+```
+{{ 123.45 | currency }}         // USD currency
+{{ 123.45 | currency: 'LKR' }}  // SL currency
+```
+
+#### 5.4 What's chaining pipes?
+
+-   A use of multiple pipes on data.
+
+```
+{{ dob | date | uppercase }}    // converting to date format, & then uppercase
+```
+
+---
