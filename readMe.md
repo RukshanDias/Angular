@@ -5,7 +5,8 @@
 1. [Angular Framework](https://github.com/RukshanDias/Angular#1-angular-framework) </br>
 2. [Components & Modules](https://github.com/RukshanDias/Angular#2-components--modules) </br>
 3. [Data Binding](https://github.com/RukshanDias/Angular#3-data-binding) </br>
-4. [Directives](https://github.com/RukshanDias/Angular#3-directives) </br>
+4. [Directives](https://github.com/RukshanDias/Angular#4-directives) </br>
+5. [Decorator & Pipes](https://github.com/RukshanDias/Angular#5-decorator--pipes) </br>
 
 ---
 
