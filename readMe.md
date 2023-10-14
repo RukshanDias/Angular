@@ -2,8 +2,8 @@
 
 ### Contents
 
-1. [Angular Framework](https://github.com/RukshanDias/Angular#angular-framework) </br>
-2. [Components & Modules](https://github.com/RukshanDias/Angular#components-&-modules) </br>
+1. [Angular Framework](https://github.com/RukshanDias/Angular#1-angular-framework) </br>
+2. [Components & Modules](https://github.com/RukshanDias/Angular#2-components--modules) </br>
 
 ---
 
