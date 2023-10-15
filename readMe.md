@@ -9,6 +9,7 @@
 5. [Decorator & Pipes](https://github.com/RukshanDias/Angular#5-decorator--pipes) </br>
 6. [Services & Dependency Injection](https://github.com/RukshanDias/Angular#6-services--dependency-injection) </br>
 7. [Lifecycle Hooks](https://github.com/RukshanDias/Angular#7-lifecycle-hooks) </br>
+8. [Observable / HttpClient/ RxJS](https://github.com/RukshanDias/Angular#8-observable--httpclient-rxjs) </br>
 
 ---
 
