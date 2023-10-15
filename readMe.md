@@ -350,3 +350,28 @@ constructor{
 ![ngOnInit vs constructor](assets/ngOnInit%20vs%20constructor.png)
 
 ---
+
+## 8. Observable / HttpClient/ RxJS
+
+#### 8.1 What're Asynchronous operations?
+
+![sync vs async](assets/sync%20vs%20async.png)
+
+#### 8.2 Promise vs Observable
+
+-   Let's say there need to be 5 data to collect:
+    -   Promise - send data once it collect all 5 data.
+    -   Observable - When it receive single data it'll send it. 5 times for 5 data.
+        ![Promise vs Observable](assets/Promise%20vs%20Observable.gif)
+        ![Promise vs Observable](assets/Promise%20vs%20Observable.png)
+
+#### 8.3 What's RxJS?
+
+-   Reactive Extensions for JavaScript.
+-   a library for composing async & event-based programs by using observables.
+-   Observables introduced in RxJs.
+-   Two main players:
+    1. Observable -> stream of data
+    2. Observer -> subscriber
+
+#### 8.4 What's Observable?
