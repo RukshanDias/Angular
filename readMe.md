@@ -10,6 +10,7 @@
 6. [Services & Dependency Injection](https://github.com/RukshanDias/Angular#6-services--dependency-injection) </br>
 7. [Lifecycle Hooks](https://github.com/RukshanDias/Angular#7-lifecycle-hooks) </br>
 8. [Observable / HttpClient/ RxJS](https://github.com/RukshanDias/Angular#8-observable--httpclient-rxjs) </br>
+9. [Typescript Basics](https://github.com/RukshanDias/Angular#9-typescript-basics) </br>
 
 ---
 
@@ -407,3 +408,27 @@ constructor{
     ![httpClient code](assets/HttpClient%20code.png)
 
 ---
+
+## 9. Typescript Basics
+
+#### 9.1 What is TS?
+
+-   Strongly typed language.
+-   Superset of JS.
+-   detect errors at compile time.
+-   Follows OOP.
+    ![TS vs JS](assets/TS%20vs%20JS.png)
+
+#### 9.2 let vs var
+
+-   let: accessible only inside the scope.
+-   var: accessible outside the scope also.
+
+#### 9.3 What's Type assertion?
+
+-   A technique that informs compiler about the type of the variable.
+
+```
+let myName;
+let isEndChartY = (<string>myName).endsWith('y');
+```
