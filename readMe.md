@@ -376,3 +376,34 @@ constructor{
     2. Observer -> subscriber
 
 #### 8.4 What's Observable?
+
+-   Used to stream data to multiple components.
+-   Creating Observable is a 3 step process:
+
+    1. import Observable from RxJS.
+    2. Create Observable & Emit data.
+    3. Subscribe the data.
+
+    ```
+    // Step 01:
+    import {Observable} from 'rxjs';
+
+    // Step 02:
+    myObservable = new Observable(observer => {
+        observer.next('a');
+        observer.next('b');
+        observer.next('c');
+    })
+
+    // Step 03:
+    thi.myObservable.subscribe((val) => {
+        console.log(val);                   // a -> b -> c
+    })
+    ```
+
+#### 8.5 What's the role of HttpClient?
+
+-   A build-in service class in Angular, that perform http requests.
+    ![httpClient code](assets/HttpClient%20code.png)
+
+---
