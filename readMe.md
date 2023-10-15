@@ -7,6 +7,7 @@
 3. [Data Binding](https://github.com/RukshanDias/Angular#3-data-binding) </br>
 4. [Directives](https://github.com/RukshanDias/Angular#4-directives) </br>
 5. [Decorator & Pipes](https://github.com/RukshanDias/Angular#5-decorator--pipes) </br>
+6. [Services & Dependency Injection](https://github.com/RukshanDias/Angular#6-services--dependency-injection) </br>.
 
 ---
 
@@ -241,3 +242,77 @@ let myColorName = 'red';
 ```
 
 ---
+
+## 6. Services & Dependency Injection
+
+#### 6.1 What's Service?
+
+-   A TS class & a reuseable code which can be used in multiple components.
+-   Can be implemented with the help of Dependency Injection.
+-   ![](assets/service-example.png)
+-   in above example, instead of coding 'ErrorLogging' twice can create a service and pass a single instance trough the component.
+
+#### 6.2 Creating a service
+
+-   Using the CLI
+
+```
+ng generate service service-name
+```
+
+-   Use dependency injection when inserting service into a component.
+-   <u>Using a service in a component.</u>
+
+```
+// step 01: import
+import {LogginService} from 'src/services/logging-service';
+
+// step 02: declaring in providers
+providers: [LoggingService]
+
+// step 03: pass service in constructor
+constructor{
+    private logginService: LoggingService
+} { }
+
+
+// step 04: using service
+constructor{
+    private logginService: LoggingService
+} {
+    this.logginService.LogError();
+ }
+
+```
+
+#### 6.3 What's Hierarchical Dependency Injection?
+
+-   Hierarchical Dependency Injection is, when you inject a service to a Node it'll be only accessible to itself & it's children. It won't be accessible for parent & siblings.
+-   ![Hierarchical Dependency Injection](assets/Hirearical%20dependency%20injection.png)
+-   So no need to provide the service in 'Providers' for accessible child components. But still have to pass it to the constructor.
+
+-   **3 places** where you can declare the provider.
+    1. component level: define what service
+        ```
+        providers: [LoggingService]
+        ```
+    2. in Module: define what service
+        ```
+        providers: [LoggingService]
+        ```
+    3. @Injectable in service :- define where to provide.
+        ```
+        @Injectable({
+            provideIn: 'root'
+        })
+        ```
+
+#### 6.4 What's a Provider?
+
+-   An obj declared inside decorator, which inform that the specific service is available for injecting.
+-   ![Providers declaring types](assets/Providers%20declaring%20types.png)
+
+#### 6.5 The role of @Injectable ?
+
+-   One service can be used by another service.
+-   @Injectable decorator should placed in both services.
