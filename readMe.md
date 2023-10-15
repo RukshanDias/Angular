@@ -7,7 +7,8 @@
 3. [Data Binding](https://github.com/RukshanDias/Angular#3-data-binding) </br>
 4. [Directives](https://github.com/RukshanDias/Angular#4-directives) </br>
 5. [Decorator & Pipes](https://github.com/RukshanDias/Angular#5-decorator--pipes) </br>
-6. [Services & Dependency Injection](https://github.com/RukshanDias/Angular#6-services--dependency-injection) </br>.
+6. [Services & Dependency Injection](https://github.com/RukshanDias/Angular#6-services--dependency-injection) </br>
+7. [Lifecycle Hooks](https://github.com/RukshanDias/Angular#7-lifecycle-hooks) </br>
 
 ---
 
@@ -316,3 +317,36 @@ constructor{
 
 -   One service can be used by another service.
 -   @Injectable decorator should placed in both services.
+
+---
+
+## 7. Lifecycle Hooks
+
+#### 7.1 What're lifecycle hooks?
+
+-   The different stages a component goes through.
+    1. constructor:
+    2. ngOnChanges
+    3. ngOnInit
+    4. ngDoCheck
+    5. Child components
+    6. ngOnDestroy
+-   ![Component lifecycle](assets/component%20lifecycle.png)
+
+#### 7.2 What's a constructor?
+
+-   a method in a TS class, that gets automatically called when class being instantiated.
+-   Not part of lifecycle. Run before lifecycle Hooks.
+-   Used to **inject dependencies(services)** into the component.
+
+#### 7.3 What's ngOnInit?
+
+-   signals the activation/creation of the component.
+-   Called only once.
+-   by default it'll be present.
+
+#### 7.4 ngOnInit vs Constructor
+
+![ngOnInit vs constructor](assets/ngOnInit%20vs%20constructor.png)
+
+---
