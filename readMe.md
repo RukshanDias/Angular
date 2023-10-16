@@ -217,6 +217,56 @@ let myColorName = 'red';
 
 ![decorators types](assets/types-of-decorators.png)
 
+##### 5.2.1 Class Decorator
+
+-   @Component - marks a class as a component & provide metadata
+-   @NgModule - marks a class as a NgModule & provide metadata
+
+##### 5.2.2 Property Decorator [(View)](https://www.youtube.com/watch?v=I317BhehZKM&t=176s)
+
+-   @Input:
+
+    -   Parent => Child
+    -   marks a class field as input property. - Will reflect in the DOM, 'ng-reflect-InputName'
+
+    ```
+    // template
+    <parent>
+        <child [exampleProperty]="Data">
+        </child>
+    </parent>
+
+    // Parent
+    Data = "Hello world";
+
+    // Child
+    @Input
+    exampleProperty: string;
+    // exampleProperty: string = "Hi"; <- means, the default val is "Hi";
+    ```
+
+-   @Output
+
+    -   Child => Parent
+
+    ```
+    // template
+    <parent>
+        <child [messageEvent]="receiveMsg($event)"></child>
+    </parent>
+
+    // parent
+    receiveMsg($event){
+        this.msg = $event;
+    }
+
+    // child
+    @Output
+    messageEvent = new EventEmitter<string>();
+
+    this.messageEvent.emit("Sending msg..")
+    ```
+
 #### 5.3 What're Pipes?
 
 -   A function that accept an input & return a transformed value.
