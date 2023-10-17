@@ -545,3 +545,23 @@ let isEndChartY = (<string>myName).endsWith('y');
     let value = getValue();
     console.log('value length: ' + value!.length);
     ```
+
+##### 9.4.3 Use of Classes?[(view)](https://www.w3schools.com/typescript/typescript_classes.php)
+
+1. Visibility:
+2. ReadOnly:
+3. Implement
+4. Extends
+5. Override
+6. Abstract
+
+##### 9.4.4 Use of Utility types?[(view)](https://www.w3schools.com/typescript/typescript_utility_types.php)
+
+1. Partial
+2. Required
+3. Record
+4. Omit
+5. Pick
+6. Exclude
+7. ReturnType
+8. Parameters
