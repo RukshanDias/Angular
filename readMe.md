@@ -482,3 +482,66 @@ constructor{
 let myName;
 let isEndChartY = (<string>myName).endsWith('y');
 ```
+
+#### 9.4 What're some intermediate/advanced concepts used in TS?
+
+##### 9.4.1 Use of 'keyof'?
+
+-   used to obtain the union of keys from a given obj type.
+
+    ```
+    interface Person {
+        name: string;
+        age: number;
+        location: string;
+    }
+
+    type K1 = keyof Person; // "name" | "age" | "location"
+    type K2 = keyof Person[]; // "length" | "push" | "pop" | "concat" | ...
+    ```
+
+##### 9.4.2 Use of Generics?
+
+-   Allows to create types, that explicitly don't won't to define.
+
+    ```
+    function identity<T>(arg: T): T {
+        return arg;
+    }
+    let output1 = identity<string>("myString");
+    let output2 = identity<number>( 100 );
+    ```
+
+-   Above example the 'T' would've same type throughout the function.
+
+##### 9.4.2 Use of NULL values?[(view)](https://www.w3schools.com/typescript/typescript_null.php)
+
+1. Optional Chaining: **'?.'**
+    - Allows access properties that may or may not exist.
+    ```
+    const yardSize = house.yard?.sqft;
+    ```
+2. Nullish Coalescence: **'??'**
+
+    - More like the ternary operator.
+    - if null - data after ?? get executed.
+    - if not null - data before ?? get executed.
+
+    ```
+    function printMileage(mileage: number | null | undefined) {
+        console.log(`Mileage: ${mileage ?? 'Not Available'}`);
+    }
+
+    printMileage(null); // Prints 'Mileage: Not Available'
+    printMileage(0); // Prints 'Mileage: 0'
+    ```
+
+3. Null Assertion: **'!'**
+    - When you know that value won't be Null.
+    ```
+    function getValue(): string | undefined {
+        return 'hello';
+    }
+    let value = getValue();
+    console.log('value length: ' + value!.length);
+    ```
