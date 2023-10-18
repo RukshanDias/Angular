@@ -426,9 +426,51 @@ constructor{
     1. Observable -> stream of data
     2. Observer -> subscriber
 
-#### 8.4 What's Observable?
+#### 8.4 Observables
+
+##### 8.4.1 Concept of Observable:
+
+-   Understand these 3 concepts:
+
+    ```
+    What do we have?
+    What do we want?
+    When do we want it?
+
+    ```
+
+##### 8.4.2 What is Observable?
 
 -   Used to stream data to multiple components.
+-   Does nothing until it's subscribed.
+-   use $ sign at end to specify the function will return an observable.
+
+##### 8.4.3 Why using observables?
+
+-   useful for event that happens overtime (key press, btn clicks, http res).
+-   watches and quickly react for arrivals/emissions.
+    -   What are the emissions?
+        -   next - emit next item.
+        -   error - error occurred don't emit further.
+        -   complete - don't emit further.
+
+##### 8.4.4 Whats subscription?
+
+-   Obj that represent the execution of an observable.
+-   Should unsubscribe the observable on destroying.
+
+```
+ngOnInit(): void {
+    this.MyOb = this.productService.getProducts$().subscribe();
+}
+
+ngOnDestroy(): void{
+    this.MyOb.unsubscribe();
+}
+```
+
+##### 8.4.5 creating an observable:
+
 -   Creating Observable is a 3 step process:
 
     1. import Observable from RxJS.
@@ -452,7 +494,17 @@ constructor{
     })
     ```
 
-#### 8.5 What's the role of HttpClient?
+-   Parts of observable: (common observable)
+    ![Parts of observable](assets/parts%20of%20observable.png)
+
+#### 8.5 Observable Patterns:
+
+1. Declarative data access pattern
+2. Retrieve on action pattern
+3. Shape on action pattern
+4. Retrieve related data pattern
+
+#### 8.6 What's the role of HttpClient?
 
 -   A build-in service class in Angular, that perform http requests.
     ![httpClient code](assets/HttpClient%20code.png)
