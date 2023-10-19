@@ -497,14 +497,21 @@ ngOnDestroy(): void{
 -   Parts of observable: (common observable)
     ![Parts of observable](assets/parts%20of%20observable.png)
 
-#### 8.5 Observable Patterns:
+#### 8.5 Pipes in observables
+
+-   Transforms each emitted item that receive.
+-   Common pipeable operators: map, filter, tap, many more..
+    ![Pipes in observables](assets/pipes%20in%20observables.png)
+    : In above example there's no need of Observer, since we can stream dat using pipeable operators.
+
+#### 8.6 Observable Patterns:
 
 1. Declarative data access pattern
 2. Retrieve on action pattern
 3. Shape on action pattern
 4. Retrieve related data pattern
 
-#### 8.6 What's the role of HttpClient?
+#### 8.7 What's the role of HttpClient?
 
 -   A build-in service class in Angular, that perform http requests.
     ![httpClient code](assets/HttpClient%20code.png)
