@@ -507,6 +507,10 @@ ngOnDestroy(): void{
 #### 8.6 Observable Patterns:
 
 1. Declarative data access pattern
+   ![Declarative data access pattern](assets/Declarative%20data%20access%20pattern.png)
+    - In this scenario, dev want to display all products onInit of the app.
+    - No need to use subscribe since, this uses Async pipe. Which will automatically subscribe and unsubscribe the observable.
+    
 2. Retrieve on action pattern
 3. Shape on action pattern
 4. Retrieve related data pattern
