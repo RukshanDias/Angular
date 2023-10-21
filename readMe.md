@@ -506,14 +506,29 @@ ngOnDestroy(): void{
 
 #### 8.6 Observable Patterns:
 
-1. Declarative data access pattern
-   ![Declarative data access pattern](assets/Declarative%20data%20access%20pattern.png)
+1. **Declarative data access pattern**
+
+    ![Declarative data access pattern](assets/Declarative%20data%20access%20pattern.png)
+
     - In this scenario, dev want to display all products onInit of the app.
     - No need to use subscribe since, this uses Async pipe. Which will automatically subscribe and unsubscribe the observable.
-    
-2. Retrieve on action pattern
-3. Shape on action pattern
-4. Retrieve related data pattern
+
+2. **Retrieve on action pattern**
+
+    ![Retrieve on action pattern](assets/Retrieve%20on%20action%20pattern.png)
+
+    - In this scenario, dev want to display a dropdown list with categories and on user select a category it'll display all products related.
+    - Here user selecting the category is an action.
+    - To respond to an action we use a Subject or a BehaviorSubject (special types of observables).
+    - ![Subjects vs BehaviorSubjects](assets/subjects%20vs%20BehaviorSubjects.png)
+        - BehaviorSubject accepts default value, while Subjects don't.
+    - Higher order mapping operators:
+      ![Mapping operators](assets/high%20order%20map%20operators.png)
+        - Automatically subscribe/unsubscribe to the inner observable.
+        - Flatten the resulting operator,like Observable<T> not Observable<Observable<T>>
+
+3. **Shape on action pattern**
+4. **Retrieve related data pattern**
 
 #### 8.7 What's the role of HttpClient?
 
