@@ -528,7 +528,20 @@ ngOnDestroy(): void{
         - Flatten the resulting operator,like Observable<T> not Observable<Observable<T>>
 
 3. **Shape on action pattern**
+   ![Shape on action pattern](assets/Shape%20on%20action%20pattern.png)
+
+-   In this scenario, dev wants to display product data when user picks one.
+-   TO work with multiple streams we use combination operators.
+-   Combine Operators:
+    -   combineLatest
+    -   merge
+    -   forkJoin
+
 4. **Retrieve related data pattern**
+   ![Retrieve related data pattern](assets/Retrieve%20related%20data%20pattern.png)
+
+-   in this scenario, dev wants to retrieve the suppliers on selecting the product.
+-   Retrieve data and use ids to retrieve related data.
 
 #### 8.7 What's the role of HttpClient?
 
